@@ -53,7 +53,6 @@ jobs:
   
   deploy:
       name: Доставка изменений
-      needs: testing
       runs-on: ubuntu-latest
       steps:
         - name: Запуск обновления
