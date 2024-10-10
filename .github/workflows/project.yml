@@ -62,14 +62,14 @@ jobs:
             host ${{ secrets.SSH_HOST }}
             username ${{ secrets.SSH_USERNAME }}
             password ${{ secrets.SSH_PASSWORD }}
-          script: |
-            cd /opt/djprj/
-            git pull origin master
-            source env/bin/activate
-            pip install -r requirements.txt
-            python webpython/manage.py migrate
-            systemctl restart gunicorn
-            
+            script: |
+              cd /opt/djprj/
+              git pull origin master
+              source env/bin/activate
+              pip install -r requirements.txt
+              python webpython/manage.py migrate
+              systemctl restart gunicorn
+              
 
 
 
